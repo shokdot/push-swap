@@ -2,7 +2,7 @@ NAME = push_swap
 SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 LIBFT = ./libft/libft.a
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -f
 
 all: $(NAME)
