@@ -51,7 +51,7 @@ C_FLAGS = -Wall -Wextra -Werror -c
 
 all:$(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) bonus
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 

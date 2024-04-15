@@ -1,14 +1,15 @@
 NAME = push_swap
 SRC = $(wildcard *.c)
+INCLUDE = $(wildcard includes/*.h)
 OBJ = $(SRC:.c=.o)
 LIBFT = ./libft/libft.a
-CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS = -g #-Wall -Wextra -Werror
 RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -L ./libft -lft -o $(NAME)
+$(NAME): $(LIBFT) $(OBJ) $(INCLUDE)
+	$(CC) $(CFLAGS) $(OBJ) -L ./libft -lft -o $(NAME)
 
 $(LIBFT):
 	@make -C ./libft
