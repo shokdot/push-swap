@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:09:57 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/15 22:39:28 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/15 23:36:55 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	check_args(int ac, char **av)
 	if (ac < 2 || !av[1][0] || is_space(av[1]))
 	{
 		ft_putendl_fd(TEXT, 1);
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	i = 1;
 	while (i < ac)
