@@ -13,4 +13,7 @@ typedef struct node
 }				stack;
 
 void			check_args(int ac, char **av);
+int				is_digit(char *str);
+int				is_space(char **av);
+int				arr_size(char **arr);
 #endif
