@@ -52,22 +52,22 @@ C_FLAGS = -Wall -Wextra -Werror -c
 all:$(NAME)
 
 $(NAME): $(OBJS) bonus
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
 
 bonus:	$(BOUNUS_OBJS)
-	ar rc $(NAME) $(BOUNUS_OBJS)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(BOUNUS_OBJS)
+	@ranlib $(NAME)
 
 clean:
-	$(RM) $(OBJS) $(BOUNUS_OBJS)
+	@$(RM) $(OBJS) $(BOUNUS_OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re:fclean all
 
 %.o:%.c
-	cc $(C_FLAGS) $< -o $@
+	@cc $(C_FLAGS) $< -o $@
 
 .PHONY: all bonus clean fclean re

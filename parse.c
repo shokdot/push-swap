@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:09:57 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/15 23:36:55 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/16 21:22:13 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,25 @@ int	arr_size(char **arr)
 	return (i);
 }
 
-int	is_space(char *s)
+int	is_digit(char *av)
+{
+	int	i;
+
+	i = 0;
+	while (av[i])
+	{
+		if (!is_digit(&av[i]))
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+// int	validate(char **av)
+// {
+// }
+
+int	is_sp(char *s)
 {
 	int	i;
 
@@ -36,22 +54,29 @@ int	is_space(char *s)
 	return (1);
 }
 
-void	check_args(int ac, char **av)
+int	is_space(char **av)
+{
+	int		i;
+	char	*c;
+
+	i = 0;
+	while (av[i])
+	{
+		c = av[i];
+		if (!is_sp(av[i]))
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char	**fill_lst(int ac, char **av)
 {
 	int		i;
 	char	**res;
 	int		j;
-	t_list	*tmp;
-	t_list	*lst;
-	int		value;
 	int		k;
 
-	// char	*lst;
-	if (ac < 2 || !av[1][0] || is_space(av[1]))
-	{
-		ft_putendl_fd(TEXT, 1);
-		exit(EXIT_FAILURE);
-	}
 	i = 1;
 	while (i < ac)
 	{
@@ -64,18 +89,35 @@ void	check_args(int ac, char **av)
 			k++;
 		}
 		i++;
-		// res = ft_split(av[i], ' ');
-		// if (!res)
-		// 	return ;
-		// j = arr_size(res);
-		// while (j > 0)
-		// {
-		// 	printf("%s\n", res[j]);
-		// 	// value = ft_atoi(res[j]);
-		// 	// printf("value = %d\n", value);
-		// 	// tmp = ft_lstnew(&value);
-		// 	// ft_lstadd_back(&lst, tmp);
-		// 	j--;
-		// }
 	}
+	return (res);
+}
+
+void	lst_validate(char **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+	{
+		if (is_digit(arr[i]))
+		{
+			ft_putendl_fd("Error", 1);
+			exit(EXIT_FAILURE);
+		}
+		i++;
+	}
+}
+
+void	check_args(int ac, char **av)
+{
+	char	**res;
+
+	if (ac < 2 || !is_space(av + 1))
+	{
+		ft_putendl_fd(TEXT, 1);
+		exit(EXIT_FAILURE);
+	}
+	res = fill_lst(ac, av);
+	// lst_validate(res);
 }

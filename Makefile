@@ -9,7 +9,7 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJ) $(INCLUDE)
-	$(CC) $(CFLAGS) $(OBJ) -L ./libft -lft -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJ) -L ./libft -lft -o $(NAME)
 
 $(LIBFT):
 	@make -C ./libft
