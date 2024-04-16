@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:00:08 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/16 19:26:00 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/16 22:24:36 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,13 @@
 
 int	main(int argc, char **argv)
 {
+	char	**res;
+
 	// stack	*stackA;
 	// stack	*stackB;
 	// int		i;
 	// char	**res;
-	check_args(argc, argv);
+	res = check_args(argc, argv);
 	// else if (argc == 2)
 	// 	res = ft_split(argv[1], ' ');
 	// else

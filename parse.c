@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:09:57 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/16 22:11:07 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/16 22:25:01 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	lst_validate(char **arr)
 	}
 }
 
-void	check_args(int ac, char **av)
+char	**check_args(int ac, char **av)
 {
 	char	**res;
 
@@ -65,4 +65,5 @@ void	check_args(int ac, char **av)
 	res = fill_arr(ac, av);
 	lst_validate(res);
 	print_arr(res);
+	return (res);
 }

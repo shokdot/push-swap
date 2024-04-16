@@ -12,7 +12,7 @@ typedef struct node
 	struct node	*next;
 }				stack;
 
-void			check_args(int ac, char **av);
+char			**check_args(int ac, char **av);
 int				is_digit(char *str);
 int				is_space(char **av);
 int				arr_size(char **arr);
