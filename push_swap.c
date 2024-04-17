@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:00:08 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/17 20:27:46 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:08:57 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,12 @@ int	main(int argc, char **argv)
 {
 	char	**res;
 	int		i;
+	t_stack	*stackA;
 
-	// stack	*stackA;
 	// stack	*stackB;
 	// int		i;
-	res = check_args(argc, argv);
+	parse_data(argc, argv);
+	// res = fill_lst(argc, argv, stackA);
 	// i = 0;
 	// while (res[i])
 	// {

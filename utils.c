@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 21:56:53 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/17 18:47:25 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:31:19 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,18 @@ int	arr_size(char **arr)
 	while (arr[i])
 		i++;
 	return (i);
+}
+
+void	print_arr(char **res)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = arr_size(res);
+	while (i < j)
+	{
+		printf("%s\n", res[i]);
+		i++;
+	}
 }

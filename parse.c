@@ -6,36 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:09:57 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/17 21:39:21 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:37:02 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
-
-void	print_arr(char **res)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = arr_size(res);
-	while (i < j)
-	{
-		printf("%s\n", res[i]);
-		i++;
-	}
-}
-
-// char	**fill_arr(int ac, char **av)
-// {
-// 	int		i;
-// 	char	**res;
-
-// 	i = 1;
-// 	while (i < ac)
-// 		res = ft_split(av[i++], ' ');
-// 	return (res);
-// }
 
 void	throw_error(void)
 {
@@ -59,15 +34,42 @@ void	arr_validate(char **arr)
 	}
 }
 
-char	**check_args(int ac, char **av)
+char	*join_args(int ac, char **av)
 {
-	char	**res;
 	int		i;
+	char	*arr;
 
+	i = 1;
+	arr = av[i++];
+	while (i < ac)
+	{
+		arr = ft_strjoin(arr, " ");
+		arr = ft_strjoin(arr, av[i++]);
+	}
+	return (arr);
+}
+
+int	check_args(int ac, char **av)
+{
 	if (ac < 2 || !is_space(&av[1]))
 		throw_error();
-	res = fill_arr(ac, av);
-	print_arr(res);
-	arr_validate(res);
-	return (res);
+	return (0);
 }
+
+void	parse_data(int ac, char **av)
+{
+	char	*arr;
+	char	**splited_arr;
+
+	check_args(ac, av);
+	arr = join_args(ac, av);
+	splited_arr = ft_split(arr, ' ');
+	free(arr);
+	arr_validate(splited_arr);
+	print_arr(splited_arr);
+}
+
+// res = fill_arr(ac, av);
+// print_arr(res);
+// arr_validate(res);
+// return (res);

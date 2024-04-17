@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:56:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/17 17:03:22 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:31:39 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,12 @@ typedef struct t_node
 	struct node	*next;
 }				t_stack;
 
-char			**check_args(int ac, char **av);
+int				check_args(int ac, char **av);
+char			*join_args(int ac, char **av);
+void			parse_data(int ac, char **av);
+char			**fill_lst(int ac, char **av, t_stack *stackA);
 int				is_digit(char *str);
 int				is_space(char **av);
 int				arr_size(char **arr);
+void			print_arr(char **res);
 #endif
