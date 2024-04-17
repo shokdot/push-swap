@@ -6,19 +6,21 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 12:00:21 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/12 21:51:47 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:02:09 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new) {
-  if (!new)
-    return ;
-  if (!lst) {
-    *lst = new;
-    return ;
-  }
-  new->next = *lst;
-  *lst = new;
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (!new)
+		return ;
+	if (!lst)
+	{
+		*lst = new;
+		return ;
+	}
+	new->next = *lst;
+	*lst = new;
 }

@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 21:56:53 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/16 21:59:27 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:47:25 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	is_digit(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (!ft_isdigit(str[i]))
+		if (!ft_isdigit(str[i]) && str[i] != '-' && str[i] != '+')
 			return (0);
 		i++;
 	}

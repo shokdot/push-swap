@@ -6,13 +6,13 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 16:25:21 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/12 21:51:47 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:00:18 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 

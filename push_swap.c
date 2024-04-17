@@ -6,11 +6,12 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:00:08 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/16 22:24:36 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/17 20:27:46 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
+#include <stdlib.h>
 
 // int	ft_count_lst(char **lst)
 // {
@@ -39,21 +40,34 @@
 // 	}
 // }
 
+void	example_fn(char **res)
+{
+	int	i;
+
+	i = 0;
+	while (res[i])
+	{
+		printf("%d\n", ft_atoi(res[i]));
+		i++;
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	char	**res;
+	int		i;
 
 	// stack	*stackA;
 	// stack	*stackB;
 	// int		i;
-	// char	**res;
 	res = check_args(argc, argv);
-	// else if (argc == 2)
-	// 	res = ft_split(argv[1], ' ');
-	// else
-	// 	res = &argv[1];
-	// printf("%s\n", res[0]);
-	// printf("%s\n", res[1]);
+	// i = 0;
+	// while (res[i])
+	// {
+	// 	printf("%s\n", res[i]);
+	// 	i++;
+	// }
+	// example_fn(res);
 	// fill_stack(&stackA, res);
 	// printf("%d\n", stackA->data);
 	// printf("%d\n", stackA->next->data);

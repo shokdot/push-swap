@@ -6,18 +6,20 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:01:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/12 21:51:47 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:02:25 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_bzero(void *s, size_t n) {
-  size_t i;
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	i;
 
-  i = 0;
-  while (i < n) {
-    ((unsigned char *)s)[i] = 0;
-    i++;
-  }
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char *)s)[i] = 0;
+		i++;
+	}
 }

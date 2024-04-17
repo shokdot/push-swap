@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:09:57 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/16 22:25:01 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/17 21:39:21 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,24 @@ void	print_arr(char **res)
 	}
 }
 
-char	**fill_arr(int ac, char **av)
-{
-	int		i;
-	char	**res;
+// char	**fill_arr(int ac, char **av)
+// {
+// 	int		i;
+// 	char	**res;
 
-	i = 1;
-	while (i < ac)
-		res = ft_split(av[i++], ' ');
-	return (res);
+// 	i = 1;
+// 	while (i < ac)
+// 		res = ft_split(av[i++], ' ');
+// 	return (res);
+// }
+
+void	throw_error(void)
+{
+	ft_putendl_fd(TEXT, 1);
+	exit(EXIT_FAILURE);
 }
 
-void	lst_validate(char **arr)
+void	arr_validate(char **arr)
 {
 	int	i;
 
@@ -56,14 +62,12 @@ void	lst_validate(char **arr)
 char	**check_args(int ac, char **av)
 {
 	char	**res;
+	int		i;
 
 	if (ac < 2 || !is_space(&av[1]))
-	{
-		ft_putendl_fd(TEXT, 1);
-		exit(EXIT_FAILURE);
-	}
+		throw_error();
 	res = fill_arr(ac, av);
-	lst_validate(res);
 	print_arr(res);
+	arr_validate(res);
 	return (res);
 }
