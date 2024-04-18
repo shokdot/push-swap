@@ -6,16 +6,29 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:09:57 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/17 22:37:02 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/18 17:06:04 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 
-void	throw_error(void)
+void	throw_error(char *txt)
 {
-	ft_putendl_fd(TEXT, 1);
+	ft_putendl_fd(txt, 1);
 	exit(EXIT_FAILURE);
+}
+
+void	memory_free(char **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
 }
 
 void	arr_validate(char **arr)
@@ -27,8 +40,8 @@ void	arr_validate(char **arr)
 	{
 		if (!is_digit(arr[i]))
 		{
-			ft_putendl_fd("Error", 1);
-			exit(EXIT_FAILURE);
+			memory_free(arr);
+			throw_error("Error");
 		}
 		i++;
 	}
@@ -52,7 +65,7 @@ char	*join_args(int ac, char **av)
 int	check_args(int ac, char **av)
 {
 	if (ac < 2 || !is_space(&av[1]))
-		throw_error();
+		throw_error(TEXT);
 	return (0);
 }
 
