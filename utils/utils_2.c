@@ -1,39 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   utils_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/26 18:30:49 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/18 23:57:06 by healeksa         ###   ########.fr       */
+/*   Created: 2024/04/18 22:36:41 by healeksa          #+#    #+#             */
+/*   Updated: 2024/04/19 00:07:58 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
-long	ft_atoi(const char *str)
+void	memory_free(char **arr)
 {
-	int		sign;
-	long	res;
-	int		i;
+	int	i;
 
-	sign = 1;
-	res = 0;
 	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == 43 || str[i] == 45)
+	while (arr[i])
 	{
-		if (str[i] == 45)
-			sign = -1;
+		free(arr[i]);
 		i++;
 	}
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		res *= 10;
-		res += str[i] - '0';
+	free(arr);
+}
+
+int	arr_size2(int *arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i] != INT_MAX)
 		i++;
-	}
-	return (res * sign);
+	return (i);
+}
+
+void	print_arr_2(long *arr, int len)
+{
+	int	i;
+
+	i = 0;
+	while (i < len)
+		printf("lol = [%ld]\n", arr[i++]);
 }

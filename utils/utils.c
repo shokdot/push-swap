@@ -6,20 +6,22 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 21:56:53 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/17 22:31:19 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/18 22:39:14 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
 int	is_digit(char *str)
 {
 	int	i;
 
 	i = 0;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
 	while (str[i])
 	{
-		if (!ft_isdigit(str[i]) && str[i] != '-' && str[i] != '+')
+		if (!ft_isdigit(str[i]))
 			return (0);
 		i++;
 	}
@@ -68,4 +70,10 @@ void	print_arr(char **res)
 		printf("%s\n", res[i]);
 		i++;
 	}
+}
+
+void	throw_error(char *txt)
+{
+	ft_putendl_fd(txt, 1);
+	exit(EXIT_FAILURE);
 }

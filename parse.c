@@ -6,30 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:09:57 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/18 17:06:04 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/19 00:07:31 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
-
-void	throw_error(char *txt)
-{
-	ft_putendl_fd(txt, 1);
-	exit(EXIT_FAILURE);
-}
-
-void	memory_free(char **arr)
-{
-	int	i;
-
-	i = 0;
-	while (arr[i])
-	{
-		free(arr[i]);
-		i++;
-	}
-	free(arr);
-}
 
 void	arr_validate(char **arr)
 {
@@ -47,13 +28,30 @@ void	arr_validate(char **arr)
 	}
 }
 
+long	*fill_arr(char **arr, int len)
+{
+	long	*res;
+	int		i;
+
+	i = 0;
+	res = (long *)malloc(sizeof(long) * (len));
+	if (!res)
+		return (NULL);
+	while (i < len)
+	{
+		res[i] = ft_atoi(arr[i]);
+		i++;
+	}
+	return (res);
+}
+
 char	*join_args(int ac, char **av)
 {
 	int		i;
 	char	*arr;
 
 	i = 1;
-	arr = av[i++];
+	arr = ft_strdup(av[i++]);
 	while (i < ac)
 	{
 		arr = ft_strjoin(arr, " ");
@@ -69,20 +67,42 @@ int	check_args(int ac, char **av)
 	return (0);
 }
 
+void	is_duplicate(long *arr, int len)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (i < len)
+	{
+		j = i + 1;
+		while (j < len)
+		{
+			if (arr[i] == arr[j])
+				throw_error("Error");
+			j++;
+		}
+		i++;
+	}
+}
+
 void	parse_data(int ac, char **av)
 {
 	char	*arr;
+	long	*int_arr;
 	char	**splited_arr;
+	int		len;
 
 	check_args(ac, av);
 	arr = join_args(ac, av);
 	splited_arr = ft_split(arr, ' ');
 	free(arr);
+	arr = NULL;
 	arr_validate(splited_arr);
-	print_arr(splited_arr);
+	len = arr_size(splited_arr);
+	int_arr = fill_arr(splited_arr, len);
+	is_duplicate(int_arr, len);
+	print_arr_2(int_arr, len);
+	return ;
 }
-
-// res = fill_arr(ac, av);
-// print_arr(res);
-// arr_validate(res);
-// return (res);

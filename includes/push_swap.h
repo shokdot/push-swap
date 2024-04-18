@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:56:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/17 22:31:39 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/19 00:06:30 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,9 @@ int				is_digit(char *str);
 int				is_space(char **av);
 int				arr_size(char **arr);
 void			print_arr(char **res);
+void			throw_error(char *txt);
+void			memory_free(char **arr);
+void			print_arr_2(long *arr, int len);
+int				arr_size2(int *arr);
+
 #endif
