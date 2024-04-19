@@ -6,27 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:09:57 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/19 00:07:31 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/19 23:27:19 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
-
-void	arr_validate(char **arr)
-{
-	int	i;
-
-	i = 0;
-	while (arr[i])
-	{
-		if (!is_digit(arr[i]))
-		{
-			memory_free(arr);
-			throw_error("Error");
-		}
-		i++;
-	}
-}
 
 long	*fill_arr(char **arr, int len)
 {
@@ -45,21 +29,6 @@ long	*fill_arr(char **arr, int len)
 	return (res);
 }
 
-char	*join_args(int ac, char **av)
-{
-	int		i;
-	char	*arr;
-
-	i = 1;
-	arr = ft_strdup(av[i++]);
-	while (i < ac)
-	{
-		arr = ft_strjoin(arr, " ");
-		arr = ft_strjoin(arr, av[i++]);
-	}
-	return (arr);
-}
-
 int	check_args(int ac, char **av)
 {
 	if (ac < 2 || !is_space(&av[1]))
@@ -67,32 +36,13 @@ int	check_args(int ac, char **av)
 	return (0);
 }
 
-void	is_duplicate(long *arr, int len)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (i < len)
-	{
-		j = i + 1;
-		while (j < len)
-		{
-			if (arr[i] == arr[j])
-				throw_error("Error");
-			j++;
-		}
-		i++;
-	}
-}
-
-void	parse_data(int ac, char **av)
+int	parse_data(int ac, char **av, long **res)
 {
 	char	*arr;
 	long	*int_arr;
 	char	**splited_arr;
 	int		len;
+	int		i;
 
 	check_args(ac, av);
 	arr = join_args(ac, av);
@@ -102,7 +52,10 @@ void	parse_data(int ac, char **av)
 	arr_validate(splited_arr);
 	len = arr_size(splited_arr);
 	int_arr = fill_arr(splited_arr, len);
+	splited_arr = memory_free(splited_arr);
 	is_duplicate(int_arr, len);
-	print_arr_2(int_arr, len);
-	return ;
+	max_min_value(int_arr, len);
+	is_sorted(int_arr, len);
+	*res = int_arr;
+	return (len);
 }
