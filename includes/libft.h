@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 13:20:10 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/20 19:29:18 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/21 19:12:09 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 typedef struct t_node
 {
-	void			*content;
+	int				content;
 	struct t_node	*next;
 }					t_stack;
 
@@ -58,15 +58,14 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-t_stack				*ft_lstnew(void *content);
+t_stack				*ft_lstnew(int content);
 void				ft_lstadd_front(t_stack **lst, t_stack *new);
 int					ft_lstsize(t_stack *lst);
 t_stack				*ft_lstlast(t_stack *lst);
 void				ft_lstadd_back(t_stack **lst, t_stack *new);
-void				ft_lstdelone(t_stack *lst, void (*del)(void *));
-void				ft_lstclear(t_stack **lst, void (*del)(void *));
-void				ft_lstiter(t_stack *lst, void (*f)(void *));
-t_stack				*ft_lstmap(t_stack *lst, void *(*f)(void *),
-						void (*del)(void *));
+void				ft_lstdelone(t_stack *lst, void (*del)(int));
+void				ft_lstclear(t_stack **lst, void (*del)(int));
+void				ft_lstiter(t_stack *lst, void (*f)(int));
+t_stack				*ft_lstmap(t_stack *lst, void *(*f)(int), void (*del)(int));
 
 #endif

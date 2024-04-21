@@ -1,5 +1,5 @@
 NAME = push_swap
-SRC = $(wildcard *.c) $(wildcard utils/*.c)
+SRC = $(wildcard *.c) $(wildcard utils/*.c) $(wildcard operations/*.c)
 INCLUDE = $(wildcard includes/*.h)
 OBJ = $(SRC:.c=.o)
 LIBFT = ./libft/libft.a

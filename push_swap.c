@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:00:08 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/20 20:51:03 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/21 21:29:36 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	main(int argc, char **argv)
 	t_stack	*stackB;
 
 	arr_len = parse_data(argc, argv, &int_arr);
-	fill_stack(int_arr, &stackA, arr_len);
-	// print_arr_2(int_arr, arr_len);
+	fill_stack(int_arr, &stackA, &stackB, arr_len);
 	print_stack(&stackA);
+	print_stack(&stackB);
 	return (0);
 }
