@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:07 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/19 23:14:13 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/22 23:44:16 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	arr_validate(char **arr)
 	i = 0;
 	while (arr[i])
 	{
-		if (!is_digit(arr[i]))
+		if (!is_digit(arr[i]) || !character_check(arr[i]))
 		{
 			memory_free(arr);
 			throw_error("Error");

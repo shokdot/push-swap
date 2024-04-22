@@ -6,11 +6,13 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:00:08 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/21 22:52:24 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/23 00:23:36 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
+
+// operation conditions validation
 
 int	main(int argc, char **argv)
 {
@@ -22,7 +24,9 @@ int	main(int argc, char **argv)
 	arr_len = parse_data(argc, argv, &int_arr);
 	fill_stack(int_arr, &stack_a, &stack_b, arr_len);
 	print_stack(&stack_a);
-	pa(&stack_a, &stack_b);
-	print_stack(&stack_b);
+	rotate(&stack_a);
+	print_stack(&stack_a);
+	rotate(&stack_a);
+	print_stack(&stack_a);
 	return (0);
 }

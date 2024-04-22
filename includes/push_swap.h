@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:56:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/21 21:42:17 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/23 00:23:15 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,11 @@ int		sa(t_stack **stackA);
 int		sb(t_stack **stackB);
 int		ss(t_stack **stackA, t_stack **stackB);
 int		pa(t_stack **stack_a, t_stack **stack_b);
+int		pb(t_stack **stackA, t_stack **stackB);
+int		ra(t_stack **stack_a);
+int		rb(t_stack **stack_b);
+int		rr(t_stack **stack_a, t_stack **stack_b);
+int		character_check(char *str);
+int		rotate(t_stack **stack);
 
 #endif

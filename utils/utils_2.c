@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:36:41 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/19 23:28:37 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/22 23:05:59 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,28 @@ void	*memory_free(char **arr)
 	free(arr);
 	arr = NULL;
 	return (NULL);
+}
+
+int	character_check(char *str)
+{
+	int	len;
+	int	i;
+
+	len = 0;
+	i = 0;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while (str[i] == '0')
+		i++;
+	while (str[i])
+	{
+		len++;
+		i++;
+	}
+	if (len > 10)
+	{
+		printf("meca");
+		return (0);
+	}
+	return (1);
 }

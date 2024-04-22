@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 21:56:53 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/19 22:13:24 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/22 23:43:09 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,6 @@ void	print_arr(char **res)
 
 void	throw_error(char *txt)
 {
-	ft_putendl_fd(txt, 1);
+	ft_putendl_fd(txt, 2);
 	exit(EXIT_FAILURE);
 }
