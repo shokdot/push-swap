@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:20:05 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/23 00:22:20 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/23 20:03:35 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,33 @@ int	push(t_stack **from, t_stack **to)
 		return (-1);
 	tmp = head_from;
 	head_from = head_from->next;
-	tmp->next = head_to;
-	*to = tmp;
 	*from = head_from;
+	if (!head_to)
+	{
+		head_to = tmp;
+		head_to->next = NULL;
+		*to = head_to;
+	}
+	else
+	{
+		tmp->next = head_to;
+		*to = tmp;
+	}
 	return (0);
 }
 
 int	pa(t_stack **stackA, t_stack **stackB)
 {
-	if (ft_lstsize(*stackA) < 1)
+	if (push(stackB, stackA) == -1)
 		return (-1);
-	push(stackA, stackB);
 	ft_putendl_fd("pa", 1);
 	return (0);
 }
 
 int	pb(t_stack **stackA, t_stack **stackB)
 {
-	if (ft_lstsize(*stackA) < 1)
+	if (push(stackA, stackB) == -1)
 		return (-1);
-	push(stackB, stackA);
 	ft_putendl_fd("pb", 1);
 	return (0);
 }

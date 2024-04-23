@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:09:57 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/22 23:55:31 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:27:22 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ long	*fill_arr(char **arr, int len)
 
 int	check_args(int ac, char **av)
 {
-	if (ac < 2 || !is_space(&av[1]))
-		throw_error(TEXT);
+	if (ac < 2)
+		exit(EXIT_SUCCESS);
+	else if (!is_space(&av[1]))
+		throw_error("Error");
 	return (0);
 }
 
