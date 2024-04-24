@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:56:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/23 20:48:54 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/24 19:28:22 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	*memory_free(char **arr);
 void	print_arr_2(long *arr, int len);
 void	print_stack(t_stack **stackA);
 int		character_check(char *str);
+void	free_stack(t_stack **stack);
 
 // OPERATIONS
 int		sa(t_stack **stackA);
@@ -52,5 +53,9 @@ int		rr(t_stack **stack_a, t_stack **stack_b);
 int		rra(t_stack **stack_a);
 int		rrb(t_stack **stack_b);
 int		rrr(t_stack **stack_a, t_stack **stack_b);
+
+// Sorting
+void	sort_stack(t_stack **stack_a, t_stack **stack_b);
+void	my_sort(t_stack **stack_a, t_stack **stack_b, int len);
 
 #endif

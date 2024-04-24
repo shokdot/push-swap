@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:36:41 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/23 22:04:51 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/04/24 22:09:17 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,20 @@ int	character_check(char *str)
 	if (len > 10)
 		return (0);
 	return (1);
+}
+
+void	free_stack(t_stack **stack)
+{
+	t_stack	*tmp;
+
+	if (!(*stack))
+		return ;
+	tmp = *stack;
+	while (tmp->next)
+	{
+		tmp = tmp->next;
+		free(tmp);
+	}
+	free(*stack);
+	stack = NULL;
 }

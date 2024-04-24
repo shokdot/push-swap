@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   my_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 19:00:08 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/25 00:01:27 by healeksa         ###   ########.fr       */
+/*   Created: 2024/04/24 17:59:46 by healeksa          #+#    #+#             */
+/*   Updated: 2024/04/24 18:02:39 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-int	main(int argc, char **argv)
+void	my_sort(t_stack **stack_a, t_stack **stack_b, int len)
 {
-	long	*int_arr;
-	int		arr_len;
-	t_stack	*stack_a;
-	t_stack	*stack_b;
-
-	arr_len = parse_data(argc, argv, &int_arr);
-	fill_stack(int_arr, &stack_a, &stack_b, arr_len);
-	print_stack(&stack_a);
-	sort_stack(&stack_a, &stack_b);
-	print_stack(&stack_a);
-	return (0);
+	if (len == 2)
+		sa(stack_a);
 }
