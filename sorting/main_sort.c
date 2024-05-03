@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:15:06 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 22:50:32 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/03 23:01:20 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	main_sort(t_stack **stack_a, t_stack **stack_b, int len)
 		{
 			pb(stack_a, stack_b);
 			rb(stack_b);
+			count++;
 		}
 		else if (head->index <= count + x)
 		{
