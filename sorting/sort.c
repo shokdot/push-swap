@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:55:37 by healeksa          #+#    #+#             */
-/*   Updated: 2024/04/24 17:59:32 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/03 21:49:59 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	sort_stack(t_stack **stack_a, t_stack **stack_b)
 {
-	int	len;
+	int len;
 
 	len = ft_lstsize(*stack_a);
 	if (len <= 5)
 		my_sort(stack_a, stack_b, len);
 	else
-		return ;
+		main_sort(stack_a, stack_b, len);
 }

@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:56:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/02 19:05:19 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/03 20:28:30 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ int		rrr(t_stack **stack_a, t_stack **stack_b);
 // Sorting
 void	sort_stack(t_stack **stack_a, t_stack **stack_b);
 void	my_sort(t_stack **stack_a, t_stack **stack_b, int len);
+void	main_sort(t_stack **stack_a, t_stack **stack_b, int len);
 
 #endif

@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   main_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 19:00:08 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 21:48:59 by healeksa         ###   ########.fr       */
+/*   Created: 2024/05/03 20:15:06 by healeksa          #+#    #+#             */
+/*   Updated: 2024/05/03 22:50:32 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-int	main(int argc, char **argv)
+void	main_sort(t_stack **stack_a, t_stack **stack_b, int len)
 {
-	long	*int_arr;
-	int		arr_len;
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	t_stack	*head;
+	int		count;
+	int		x;
 
-	arr_len = parse_data(argc, argv, &int_arr);
-	fill_stack(int_arr, &stack_a, &stack_b, arr_len);
-	// print_stack(&stack_a);
-	sort_stack(&stack_a, &stack_b);
-	// print_stack(&stack_a);
-	free_stack(&stack_a);
-	free_stack(&stack_b);
-	return (0);
+	if (len > 100)
+		x = 30;
+	else
+		x = 15;
+	head = *stack_a;
+	while (len < count)
+	{
+		if (head->index <= count)
+		{
+			pb(stack_a, stack_b);
+			rb(stack_b);
+		}
+		else if (head->index <= count + x)
+		{
+			pb(stack_a, stack_b);
+			count++;
+		}
+		else
+			ra(stack_a);
+	}
 }
