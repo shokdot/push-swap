@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:00:08 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 23:31:58 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/05 14:45:02 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ int	main(int argc, char **argv)
 	// print_stack(&stack_a);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
-	return (0);
 }

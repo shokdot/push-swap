@@ -6,20 +6,21 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 11:50:48 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 23:29:57 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/05 14:43:55 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-t_stack	*ft_lstnew(int content, int index) {
-  t_stack *head;
+t_stack	*ft_lstnew(int content, int index)
+{
+	t_stack	*head;
 
-  head = (t_stack *)malloc(sizeof(t_stack));
-  if (!head)
-    return (NULL);
-  head->content = content;
-  head->index = index;
-  head->next = NULL;
-  return (head);
+	head = (t_stack *)malloc(sizeof(t_stack));
+	if (!head)
+		return (NULL);
+	head->content = content;
+	head->index = index;
+	head->next = NULL;
+	return (head);
 }
