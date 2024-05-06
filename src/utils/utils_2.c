@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:36:41 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/05 14:40:51 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/05 15:27:59 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,17 @@ int	is_sorted_stack(t_stack **stack)
 		head = head->next;
 	}
 	return (1);
+}
+
+int	ft_log2(unsigned int n)
+{
+	int	result;
+
+	result = -1;
+	while (n)
+	{
+		n >>= 1;
+		result++;
+	}
+	return (result);
 }

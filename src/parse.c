@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:09:57 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 23:31:55 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:56:25 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int	parse_data(int ac, char **av, long **res)
 	long	*int_arr;
 	char	**splited_arr;
 	int		len;
-	int		i;
 
 	check_args(ac, av);
 	arr = join_args(ac, av);

@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 22:51:00 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 23:32:56 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/06 14:41:54 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,30 @@ int	find_min_index(t_stack **stack)
 		head = head->next;
 	}
 	return (index);
+}
+
+int	big_index(t_stack **stack)
+{
+	t_stack	*head;
+	int		tmp_index;
+	int		i;
+
+	head = *stack;
+	tmp_index = head->index;
+	while (head)
+	{
+		if (tmp_index < head->index)
+			tmp_index = head->index;
+		head = head->next;
+	}
+	i = 0;
+	head = *stack;
+	while (head)
+	{
+		if (head->index == tmp_index)
+			break ;
+		head = head->next;
+		i++;
+	}
+	return (i);
 }

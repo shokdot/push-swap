@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:56:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 20:28:30 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/05 17:37:22 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ void	free_stack(t_stack **stack);
 void	indexing(t_stack **stack);
 int		is_sorted_stack(t_stack **stack);
 int		find_min_index(t_stack **stack);
+int		ft_sqrt(int nb);
+int		ft_log2(unsigned int n);
+int		big_index(t_stack **stack);
 
 // OPERATIONS
 int		sa(t_stack **stackA);

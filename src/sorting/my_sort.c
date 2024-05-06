@@ -6,13 +6,13 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:59:46 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 23:32:22 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:58:16 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	sort_3(t_stack **stack_a, t_stack **stack_b)
+void	sort_3(t_stack **stack_a)
 {
 	t_stack	*head;
 
@@ -53,7 +53,7 @@ void	sort_4(t_stack **stack_a, t_stack **stack_b)
 	if (is_sorted_stack(stack_a))
 		return ;
 	pb(stack_a, stack_b);
-	sort_3(stack_a, stack_b);
+	sort_3(stack_a);
 	pa(stack_a, stack_b);
 }
 
@@ -88,7 +88,7 @@ void	my_sort(t_stack **stack_a, t_stack **stack_b, int len)
 	if (len == 2)
 		sa(stack_a);
 	else if (len == 3)
-		sort_3(stack_a, stack_b);
+		sort_3(stack_a);
 	else if (len == 4)
 		sort_4(stack_a, stack_b);
 	else if (len == 5)

@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:07 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 23:33:04 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:56:45 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,7 @@ void	max_min_value(long *arr, int len)
 
 void	is_sorted(long *arr, int len)
 {
-	int		i;
-	long	tmp;
+	int	i;
 
 	i = 0;
 	while (i < len - 1)
