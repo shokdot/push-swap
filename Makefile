@@ -4,7 +4,7 @@ INCLUDE = $(wildcard includes/*.h)
 OBJ = $(SRC:.c=.o)
 OBJ_DIR = ./obj
 LIBFT = ./libft/libft.a
-CFLAGS = -g #-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
 all: $(NAME)
