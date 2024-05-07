@@ -6,13 +6,13 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:57:42 by healeksa          #+#    #+#             */
-/*   Updated: 2024/02/20 19:09:53 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/07 21:48:26 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../includes/get_next_line.h"
 
-int	ft_strlen(const char *str)
+int	ft_strlen_line(const char *str)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	ft_strlen(const char *str)
 	return (i);
 }
 
-int	ft_strchr(const char *str, int c)
+int	ft_strchr_line(const char *str, int c)
 {
 	int	i;
 
@@ -40,7 +40,7 @@ int	ft_strchr(const char *str, int c)
 	return (0);
 }
 
-char	*ft_strjoin(char *left_str, char *buff)
+char	*ft_strjoin_line(char *left_str, char *buff)
 {
 	int		i;
 	int		j;
@@ -53,7 +53,8 @@ char	*ft_strjoin(char *left_str, char *buff)
 	}
 	if (!left_str || !buff)
 		return (NULL);
-	str = malloc(sizeof(char) * ((ft_strlen(left_str) + ft_strlen(buff)) + 1));
+	str = malloc(sizeof(char) * ((ft_strlen_line(left_str)
+					+ ft_strlen_line(buff)) + 1));
 	if (str == NULL)
 		return (NULL);
 	i = -1;
@@ -63,12 +64,12 @@ char	*ft_strjoin(char *left_str, char *buff)
 			str[i] = left_str[i];
 	while (buff[j] != '\0')
 		str[i++] = buff[j++];
-	str[ft_strlen(left_str) + ft_strlen(buff)] = '\0';
+	str[ft_strlen_line(left_str) + ft_strlen_line(buff)] = '\0';
 	free(left_str);
 	return (str);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr_line(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	j;
@@ -90,24 +91,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	str[j] = '\0';
 	return (str);
-}
-
-char	*ft_strdup(const char *src)
-{
-	int		i;
-	int		j;
-	char	*addr;
-
-	i = 0;
-	j = ft_strlen(src);
-	addr = (char *)malloc(sizeof(char) * (j + 1));
-	if (!addr)
-		return (0);
-	while (i < j)
-	{
-		addr[i] = src[i];
-		i++;
-	}
-	addr[i] = '\0';
-	return (addr);
 }
