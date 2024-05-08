@@ -6,9 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 19:11:39 by healeksa          #+#    #+#             */
-/*   Updated: 2024/01/08 19:11:39 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/08 18:27:21 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../../includes/libft.h"
 
 int	ft_strcmp(char *s1, char *s2)
 {

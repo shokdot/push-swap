@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:54:16 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 23:32:44 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/08 18:17:50 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,28 +35,31 @@ int	reverse_rotate(t_stack **stack)
 	return (0);
 }
 
-int	rra(t_stack **stack_a)
+int	rra(t_stack **stack_a, int flag)
 {
 	if (reverse_rotate(stack_a) == -1)
 		return (-1);
-	ft_putendl_fd("rra", 1);
+	if (flag)
+		ft_putendl_fd("rra", 1);
 	return (0);
 }
 
-int	rrb(t_stack **stack_b)
+int	rrb(t_stack **stack_b, int flag)
 {
 	if (reverse_rotate(stack_b) == -1)
 		return (-1);
-	ft_putendl_fd("rrb", 1);
+	if (flag)
+		ft_putendl_fd("rrb", 1);
 	return (0);
 }
 
-int	rrr(t_stack **stack_a, t_stack **stack_b)
+int	rrr(t_stack **stack_a, t_stack **stack_b, int flag)
 {
 	if (ft_lstsize(*stack_a) < 2 || ft_lstsize(*stack_b) < 2)
 		return (-1);
 	reverse_rotate(stack_a);
 	reverse_rotate(stack_b);
-	ft_putendl_fd("rrr", 1);
+	if (flag)
+		ft_putendl_fd("rrr", 1);
 	return (0);
 }

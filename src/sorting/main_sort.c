@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:15:06 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/06 17:33:23 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/08 18:24:55 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,17 @@ void	phase1(t_stack **stack_a, t_stack **stack_b, int len)
 	{
 		if ((*stack_a)->index <= count)
 		{
-			pb(stack_a, stack_b);
-			rb(stack_b);
+			pb(stack_a, stack_b, 1);
+			rb(stack_b, 1);
 			count++;
 		}
 		else if ((*stack_a)->index <= count + step)
 		{
-			pb(stack_a, stack_b);
+			pb(stack_a, stack_b, 1);
 			count++;
 		}
 		else
-			ra(stack_a);
+			ra(stack_a, 1);
 	}
 }
 
@@ -57,11 +57,11 @@ void	phase2(t_stack **stack_a, t_stack **stack_b, int len)
 		while ((*stack_b)->index != max_index)
 		{
 			if (index <= size / 2)
-				rb(stack_b);
+				rb(stack_b, 1);
 			else
-				rrb(stack_b);
+				rrb(stack_b, 1);
 		}
-		pa(stack_a, stack_b);
+		pa(stack_a, stack_b, 1);
 		size--;
 	}
 }

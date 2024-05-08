@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:56:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/05 17:37:22 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/08 18:22:01 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,17 @@ int		ft_log2(unsigned int n);
 int		big_index(t_stack **stack);
 
 // OPERATIONS
-int		sa(t_stack **stackA);
-int		sb(t_stack **stackB);
-int		ss(t_stack **stackA, t_stack **stackB);
-int		pa(t_stack **stack_a, t_stack **stack_b);
-int		pb(t_stack **stackA, t_stack **stackB);
-int		ra(t_stack **stack_a);
-int		rb(t_stack **stack_b);
-int		rr(t_stack **stack_a, t_stack **stack_b);
-int		rra(t_stack **stack_a);
-int		rrb(t_stack **stack_b);
-int		rrr(t_stack **stack_a, t_stack **stack_b);
+int		sa(t_stack **stackA, int flag);
+int		sb(t_stack **stackB, int flag);
+int		ss(t_stack **stackA, t_stack **stackB, int flag);
+int		pa(t_stack **stack_a, t_stack **stack_b, int flag);
+int		pb(t_stack **stackA, t_stack **stackB, int flag);
+int		ra(t_stack **stack_a, int flag);
+int		rb(t_stack **stack_b, int flag);
+int		rr(t_stack **stack_a, t_stack **stack_b, int flag);
+int		rra(t_stack **stack_a, int flag);
+int		rrb(t_stack **stack_b, int flag);
+int		rrr(t_stack **stack_a, t_stack **stack_b, int flag);
 
 // Sorting
 void	sort_stack(t_stack **stack_a, t_stack **stack_b);
