@@ -6,7 +6,7 @@ INCLUDE = $(wildcard includes/*.h)
 OBJ = $(SRC:.c=.o)
 BN_OBJ = $(filter-out src/push_swap.o src/parse.o, $(SRC:.c=.o)) $(BN_SRC:.c=.o)
 LIBFT = ./src/libft/libft.a
-CFLAGS = -g #-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
 all: $(NAME)

@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:54:16 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/08 18:17:50 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/10 18:45:02 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	reverse_rotate(t_stack **stack)
 		head = head->next;
 	}
 	last->next = *stack;
+	last->prev = NULL;
+	(*stack)->prev = last;
 	*stack = last;
 	return (0);
 }

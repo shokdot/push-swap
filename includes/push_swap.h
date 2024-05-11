@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:56:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/08 18:22:01 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/11 22:53:51 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,8 @@ void	fill_stack(long *arr, t_stack **stackA, t_stack **stackB, int len);
 
 int		is_space(char **av);
 int		arr_size(char **arr);
-void	print_arr(char **res);
 void	throw_error(char *txt);
 void	*memory_free(char **arr);
-void	print_arr_2(long *arr, int len);
-void	print_stack(t_stack **stackA);
 int		character_check(char *str);
 void	free_stack(t_stack **stack);
 void	indexing(t_stack **stack);

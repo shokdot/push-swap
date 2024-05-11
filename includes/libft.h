@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 13:20:10 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/08 17:22:07 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/09 20:42:38 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 # define LIBFT_H
 
 # include <limits.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 typedef struct t_node
 {
-	int				content;
 	int				index;
+	int				content;
+	struct t_node	*prev;
 	struct t_node	*next;
 }					t_stack;
 

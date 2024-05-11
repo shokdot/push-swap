@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 23:46:49 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/08 18:17:36 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/09 22:23:03 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,18 @@ int	rotate(t_stack **stack)
 {
 	t_stack	*tmp;
 	t_stack	*last;
+	t_stack	*head;
 
 	tmp = *stack;
 	if (ft_lstsize(tmp) < 2)
 		return (-1);
 	last = ft_lstlast(tmp);
-	*stack = tmp->next;
+	head = (*stack)->next;
+	head->prev = NULL;
 	last->next = tmp;
+	tmp->prev = last;
 	tmp->next = NULL;
+	*stack = head;
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:20:05 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/08 18:16:34 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/11 22:45:28 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,27 @@
 
 int	push(t_stack **from, t_stack **to)
 {
-	t_stack	*head_from;
-	t_stack	*head_to;
 	t_stack	*tmp;
+	t_stack	*head_to;
 
-	head_from = *from;
+	tmp = (*from);
 	head_to = *to;
-	if (ft_lstsize(head_from) < 1)
+	if (ft_lstsize(tmp) < 1)
 		return (-1);
-	tmp = head_from;
-	head_from = head_from->next;
-	*from = head_from;
+	(*from) = (*from)->next;
+	if ((*from))
+		(*from)->prev = NULL;
 	if (!head_to)
 	{
-		head_to = tmp;
-		head_to->next = NULL;
-		*to = head_to;
+		tmp->prev = NULL;
+		tmp->next = NULL;
+		*to = tmp;
 	}
 	else
 	{
 		tmp->next = head_to;
+		head_to->prev = tmp;
+		tmp->prev = NULL;
 		*to = tmp;
 	}
 	return (0);

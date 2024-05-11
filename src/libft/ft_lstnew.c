@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 11:50:48 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/05 14:43:55 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/09 20:43:13 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ t_stack	*ft_lstnew(int content, int index)
 	head->content = content;
 	head->index = index;
 	head->next = NULL;
+	head->prev = NULL;
 	return (head);
 }
