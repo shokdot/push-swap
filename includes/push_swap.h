@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:56:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/21 19:20:45 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/21 20:24:00 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	arr_validate(char **arr);
 void	is_duplicate(long *arr, int len);
 void	max_min_value(long *arr, int len);
 void	is_sorted(long *arr, int len);
-void	fill_stack(long *arr, t_stack **stackA, t_stack **stackB, int len);
+void	fill_stack(long **arr, t_stack **stackA, t_stack **stackB, int len);
 
 // UTILS
 

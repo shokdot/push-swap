@@ -6,15 +6,15 @@ INCLUDE = $(wildcard includes/*.h)
 OBJ = $(SRC:.c=.o)
 BN_OBJ = $(filter-out src/push_swap.o src/parse.o, $(SRC:.c=.o)) $(BN_SRC:.c=.o)
 LIBFT = ./src/libft/libft.a
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
 RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(OBJ) $(INCLUDE)
+$(NAME): $(LIBFT) $(OBJ) $(INCLUDE) Makefile
 	@$(CC) $(CFLAGS) $(OBJ) -L ./src/libft -lft -o $(NAME)
 
-bonus: $(NAME) $(LIBFT) $(BN_OBJ) $(INCLUDE)
+bonus: $(NAME) $(LIBFT) $(BN_OBJ) $(INCLUDE) Makefile
 	@$(CC) $(CFLAGS) $(BN_OBJ) -L ./src/libft -lft -o $(BONUS)
 
 $(LIBFT):
