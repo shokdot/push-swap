@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:00:08 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/11 22:51:48 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/21 19:21:49 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	main(int argc, char **argv)
 
 	arr_len = parse_data(argc, argv, &int_arr);
 	fill_stack(int_arr, &stack_a, &stack_b, arr_len);
+	free(int_arr);
+	int_arr = NULL;
 	sort_stack(&stack_a, &stack_b);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
