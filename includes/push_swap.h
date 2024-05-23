@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:56:32 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/21 19:20:45 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/23 21:33:21 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		arr_size(char **arr);
 void	throw_error(char *txt);
 void	*memory_free(char **arr);
 int		character_check(char *str);
-void	free_stack(t_stack **stack);
+void	free_stack(t_stack *stack);
 void	indexing(t_stack **stack);
 int		is_sorted_stack(t_stack **stack);
 int		find_min_index(t_stack **stack);

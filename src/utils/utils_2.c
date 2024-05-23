@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:36:41 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/05 15:27:59 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/23 21:36:29 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,21 +48,18 @@ int	character_check(char *str)
 	return (1);
 }
 
-void	free_stack(t_stack **stack)
+void	free_stack(t_stack *stack)
 {
-	t_stack	*head;
 	t_stack	*tmp;
 
-	head = *stack;
-	if (!head || stack)
+	if (!stack)
 		return ;
-	while (head)
+	while (stack)
 	{
-		tmp = head;
-		head = head->next;
-		free(tmp);
+		tmp = stack->next;
+		free(stack);
+		stack = tmp;
 	}
-	free(stack);
 }
 
 int	is_sorted_stack(t_stack **stack)
