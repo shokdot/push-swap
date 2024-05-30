@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:55:35 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/07 20:40:55 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:22:00 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

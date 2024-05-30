@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:54:16 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/10 18:45:02 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:21:39 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 
 int	reverse_rotate(t_stack **stack)
 {

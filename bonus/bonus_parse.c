@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:59:38 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/08 19:00:04 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 20:16:49 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 long	*fill_arr(char **arr, int len)
 {

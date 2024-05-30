@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 11:50:48 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/09 20:43:13 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:22:00 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 t_stack	*ft_lstnew(int content, int index)
 {

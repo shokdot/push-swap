@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:19:25 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/23 20:25:32 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:20:25 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	fill_stack(long *arr, t_stack **stackA, t_stack **stackB, int len)
 {

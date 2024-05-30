@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/26 16:23:47 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/30 18:22:00 by healeksa         ###   ########.fr       */
+/*   Created: 2024/05/28 00:46:10 by healeksa          #+#    #+#             */
+/*   Updated: 2024/05/28 00:48:43 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t n)
+void	ft_free(void **ptr)
 {
-	size_t	i;
-
-	i = 0;
-	if (n > 0)
+	if (ptr && *ptr)
 	{
-		while (src[i] && i < (n - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		free(*ptr);
+		*ptr = NULL;
 	}
-	return (ft_strlen(src));
 }

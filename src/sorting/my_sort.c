@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:59:46 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/08 18:24:21 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:21:03 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 
 void	sort_3(t_stack **stack_a)
 {

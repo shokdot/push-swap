@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 22:51:00 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/06 14:41:54 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:20:31 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 
 t_stack	*get_min(t_stack **stack)
 {

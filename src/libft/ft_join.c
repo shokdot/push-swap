@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_join.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/26 16:23:47 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/30 18:22:00 by healeksa         ###   ########.fr       */
+/*   Created: 2024/05/27 19:00:17 by healeksa          #+#    #+#             */
+/*   Updated: 2024/05/30 21:05:33 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t n)
+char	*ft_join(char *s1, char const *s2)
 {
-	size_t	i;
+	char	*res;
 
-	i = 0;
-	if (n > 0)
+	if (!s2)
+		return (NULL);
+	if (!s1)
 	{
-		while (src[i] && i < (n - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		s1 = (char *)malloc(sizeof(char) * 1);
+		if (!s1)
+			return (NULL);
+		s1[0] = '\0';
 	}
-	return (ft_strlen(src));
+	res = ft_strjoin(s1, s2);
+	ft_free((void *)&s1);
+	return (res);
 }

@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 11:44:39 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 23:29:57 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:22:00 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 static size_t	ft_count_words(char const *s, char c)
 {

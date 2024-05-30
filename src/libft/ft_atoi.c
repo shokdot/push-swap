@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 18:30:49 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 23:29:38 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:22:00 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 long	ft_atoi(const char *str)
 {

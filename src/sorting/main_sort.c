@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:15:06 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/08 18:24:55 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:20:53 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 
 int	fn_step(int len)
 {

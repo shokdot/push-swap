@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 21:56:53 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/05 15:27:39 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:20:40 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 
 int	is_digit(char *str)
 {

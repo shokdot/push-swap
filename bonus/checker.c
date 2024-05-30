@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 20:27:41 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/23 21:35:09 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 20:16:08 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "checker.h"
 
 int	main(int ac, char **av)
 {

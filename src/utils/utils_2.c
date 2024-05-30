@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:36:41 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/23 21:36:29 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:20:36 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 
 void	*memory_free(char **arr)
 {

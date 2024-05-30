@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 21:31:28 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/08 21:58:30 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 20:47:14 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "checker.h"
 
 int	execute(char *command, t_stack **stack_a, t_stack **stack_b)
 {

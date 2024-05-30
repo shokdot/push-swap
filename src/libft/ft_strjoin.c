@@ -6,13 +6,13 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 17:27:35 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/03 23:29:57 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 20:22:25 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;
 	size_t	i;
@@ -37,6 +37,5 @@ char	*ft_strjoin(char *s1, char *s2)
 		i++;
 	}
 	res[j] = '\0';
-	free(s1);
 	return (res);
 }

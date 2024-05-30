@@ -6,11 +6,11 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:20:05 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/11 22:45:28 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:21:14 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 
 int	push(t_stack **from, t_stack **to)
 {
