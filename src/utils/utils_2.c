@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:36:41 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/30 18:20:36 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/06/20 17:36:08 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ int	is_sorted_stack(t_stack **stack)
 	t_stack	*head;
 	int		tmp;
 
+	if (!stack || !*stack)
+		return (1);
 	head = *stack;
 	tmp = head->content;
 	while (head)

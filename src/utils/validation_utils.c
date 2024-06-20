@@ -6,7 +6,7 @@
 /*   By: healeksa <healeksa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:08:07 by healeksa          #+#    #+#             */
-/*   Updated: 2024/05/30 18:20:45 by healeksa         ###   ########.fr       */
+/*   Updated: 2024/06/20 17:36:37 by healeksa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,8 @@ char	*join_args(int ac, char **av)
 	arr = ft_strdup(av[i++]);
 	while (i < ac)
 	{
-		arr = ft_strjoin(arr, " ");
-		arr = ft_strjoin(arr, av[i++]);
+		arr = ft_join(arr, " ");
+		arr = ft_join(arr, av[i++]);
 	}
 	return (arr);
 }
